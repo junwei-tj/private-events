@@ -4,5 +4,11 @@
 <p>Event Date: <%= @event.date %></p>
 <p>Event Location: <%= @event.location %></p>
 <p>Created by: <%= link_to @event.creator.username, user_path(@event.creator) %></p>
+<br>
+<!-- 
+<% if current_user.username == @event.creator.username %>
+  <%= link_to "Attend event", new_attendance_path %>
+<% end%>
+-->
 
 <%= link_to "Events Index", events_path %>
