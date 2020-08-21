@@ -1,0 +1,8 @@
+<h2>Event Details</h2>
+
+<p>Event Title: <%= @event.title %></p>
+<p>Event Date: <%= @event.date %></p>
+<p>Event Location: <%= @event.location %></p>
+<p>Created by: <%= link_to @event.creator.username, user_path(@event.creator) %></p>
+
+<%= link_to "Events Index", events_path %>

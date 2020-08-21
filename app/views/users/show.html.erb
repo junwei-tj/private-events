@@ -2,4 +2,9 @@
 
 <p>You are looking at <strong><%= @user.username %>'s</strong> profile</p>
 
+<h4>Events Created</h4>
+<% @user.created_events.each do |event| %>
+  <p><%= event.title %> <%= link_to "details", event_path(event) %></p>
+<% end %>
+
 <%= link_to "Index", users_path %>
